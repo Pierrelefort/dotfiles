@@ -1,0 +1,12 @@
+# dotfiles repo
+
+## `chezmoi` dotfiles
+
+### List of dotfiles
+
+{{- $managedFiles := (output "chezmoi" "managed") -}}
+{{- range (splitList "\n" $managedFiles) -}}
+  {{- if . -}}
+- {{ . }}
+  {{- end -}}
+{{- end -}}
