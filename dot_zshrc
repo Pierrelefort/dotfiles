@@ -106,6 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # Make nvim the default editor
 export EDITOR="nvim"
  
+# Golang
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/go
 export GOBIN=$GOPATH/bin
@@ -115,3 +116,18 @@ export PATH=$PATH:$GOROOT/bin
 
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/snap/bin"
+
+# Cargo
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Oh-My-Posh
+THEME_FILE_OH_MY_POSH="$HOME/.config/oh-my-posh/themes/atomic.omp.json"
+
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  if [ -f $THEME_FILE_OH_MY_POSH ]; then
+    eval "$(oh-my-posh init zsh --config ~/.config/oh-my-posh/themes/atomic.omp.json)"
+  else
+    echo "Theme oh-my-posh configured is missing: $THEME_FILE_OH_MY_POSH. Back to default."
+    eval "$(oh-my-posh init)"
+  fi
+fi
