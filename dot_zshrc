@@ -10,8 +10,21 @@ HIST_STAMPS="dd.mm.yyyy"
 zstyle ':omz:update' mode auto      # update automatically without asking
 
 # Standard plugins can be found in $ZSH/plugins/
+standard_plugins=(
+  git
+  z
+  chezmoi
+  history
+)
+
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git z chezmoi history zsh-autosuggestions zsh-syntax-highlighting fast-syntax-highlighting zsh-autocomplete) 
+custom_plugins=(
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+  zsh-autocomplete
+)
+
+plugins=( "${standard_plugins[@]}" "${custom_plugins[@]}" ) 
 
 source $ZSH/oh-my-zsh.sh
 
