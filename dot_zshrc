@@ -21,6 +21,7 @@ standard_plugins=(
 custom_plugins=(
   zsh-autosuggestions
   zsh-syntax-highlighting
+  fast-syntax-highlighting
   zsh-autocomplete
 )
 
