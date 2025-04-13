@@ -30,7 +30,7 @@ plugins=( "${standard_plugins[@]}" "${custom_plugins[@]}" )
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Custom export
 # Golang
