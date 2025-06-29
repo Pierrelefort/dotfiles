@@ -27,10 +27,22 @@ custom_plugins=(
 
 plugins=( "${standard_plugins[@]}" "${custom_plugins[@]}" ) 
 
-source $ZSH/oh-my-zsh.sh
+if [ -f "$ZSH/oh-my-zsh.sh" ]; then
+  source $ZSH/oh-my-zsh.sh
+else
+  echo "Missing file at $ZSH/oh-my-zsh.sh."
+fi
 
 # User configuration
-export EDITOR='nvim'
+if ! command -v vim >/dev/null 2>&1
+then
+    export EDITOR='vim'
+fi
+
+if ! command -v nvim >/dev/null 2>&1
+then
+    export EDITOR='nvim'
+fi
 
 # Custom export
 # Golang
