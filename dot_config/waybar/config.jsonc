@@ -8,13 +8,10 @@
   "modules-right": [
     "pulseaudio",
     "custom/uptime",
-    "backlight",
-    "battery",
     "network",
     "cpu",
     "memory",
     "tray",
-    "custom/lock",
     "custom/power"
   ],
 
@@ -86,5 +83,5 @@
     "tooltip": false,
     "on-click": "wlogout &",
     "format": "⏻"
-  },
+  }
 }
