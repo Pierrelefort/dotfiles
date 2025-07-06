@@ -3,7 +3,7 @@
   "position": "top",
   "modules-left": ["hyprland/workspaces"],
 
-  "modules-center": ["clock", "custom/weather"],
+  "modules-center": ["clock"],
 
   "modules-right": [
     "pulseaudio",
@@ -13,7 +13,6 @@
     "network",
     "cpu",
     "memory",
-    "custom/docker",
     "tray",
     "custom/lock",
     "custom/power"
@@ -43,7 +42,7 @@
   },
 
   "clock": {
-    "timezone": "America/Fortaleza",
+    "timezone": "France/Paris",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "{:%d/%m/%Y - %H:%M:%S}",
     "interval": 1
@@ -88,20 +87,4 @@
     "on-click": "wlogout &",
     "format": "⏻"
   },
-
-  "custom/docker": {
-    "format": "{}",
-    "return-type": "json",
-    "interval": 10,
-    "exec": "$(pwd)/scripts/docker-stats/docker-stats",
-    "tooltip": true
-  },
-
-  "custom/weather": {
-    "format": "{}",
-    "tooltip": true,
-    "interval": 1800,
-    "exec": "$(pwd)/scripts/weather-stats/weather-stats",
-    "return-type": "json"
-  }
 }
