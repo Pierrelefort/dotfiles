@@ -55,3 +55,5 @@ if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
     eval "$(oh-my-posh init)"
   fi
 fi
+
+eval "$(bw completion --shell zsh); compdef _bw bw;"
